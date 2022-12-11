@@ -1,0 +1,47 @@
+---
+slug: /
+sidebar_position: 1
+---
+
+# Quick Start
+
+:::caution Just use it!
+Pre-requisite to have `kubectl` [installed](https://kubectl.docs.kubernetes.io/installation/kubectl/).
+:::
+
+Lighter and easier, impossible. 🪶 Kubernetes Serverless cluster.
+
+The best way to learn Kubernetes is by doing, and K1s, a **Kubernetes serverless cluster** will help you quickly get to grips with the technology.
+
+All users are anonymous by default and have access to the default namespace, some examples you can try immediately:
+
+Get the `pods` in the default namespace.
+
+```bash
+kubectl get pods --server=https://k1s.me -ndefault
+```
+
+Get the namespaces in the cluster.
+
+```bash
+kubectl get namespaces --server=https://k1s.me
+```
+
+*.* <Highlight color="#25ffa0">[Get Early Access!](https://sendfox.com/lp/1r7409)</Highlight>
+
+## What you'll need
+
+- [kubectl](https://kubectl.docs.kubernetes.io/installation/kubectl/) version 1.25 installed in your local PC or server from where K1s Serverless is going to be accessed.
+
+export const Highlight = ({children, color}) => (
+  <span
+    style={{
+      backgroundColor: color,
+      borderRadius: '20px',
+      color: '#fff',
+      padding: '10px',
+      cursor: 'pointer',
+    }}>
+    {children}
+  </span>
+);

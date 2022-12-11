@@ -1,0 +1,53 @@
+import React from 'react';
+import clsx from 'clsx';
+import Link from '@docusaurus/Link';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import Layout from '@theme/Layout';
+import HomepageFeatures from '@site/src/components/HomepageFeatures';
+
+import styles from './index.module.css';
+
+function HomepageHeader() {
+  const {siteConfig} = useDocusaurusContext();
+  return (
+    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+      <div className="container">
+        <h1 className="hero__title">{siteConfig.title}</h1>
+        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <div className={styles.buttons}>
+          <Link
+            className="button button--secondary button--lg"
+            to="/early-access">
+            {siteConfig.title} Quick start &lt; 5 min ⚡
+          </Link>
+        </div>
+      </div>
+    </header>
+  );
+}
+
+export default function Home() {
+  const {siteConfig} = useDocusaurusContext();
+  return (
+    <Layout
+      title={`${siteConfig.title} Serverless Kubernetes`}
+      description="Description will go into a meta tag in <head />">
+      <HomepageHeader />
+      <main>
+      ## What is K1s?
+K1s is a fully managed serverless Kubernetes cluster with a generous free tier. K1s separates storage and compute and offers modern developer features such as serverless, branching, bottomless storage, and more. K1s is open source and written in Rust.
+
+Serverless
+K1s automatically and transparently scales up compute on demand, in response to application workload. K1s also scales down to zero on inactivity. Since K1s is serverless, it only charges for what you use and can deliver up to a 10x reduction in cost.
+
+Built for developer productivity
+K1s allows you to create a branch of your PostgreSQL database. It's easy to create branches for development, test, and staging environments.
+
+Branching is instant and has close to zero overhead, as it is implemented using the "copy-on-write" technique in K1s storage. In fact, branches are so cheap that you can create a branch for every code deployment in your CI/CD pipeline. To learn more about our branching feature, see Branching.
+
+Fully managed
+K1s provides a high available Kubernetes cluster without any administrative, maintenance, or scaling burden.
+      </main>
+    </Layout>
+  );
+}
