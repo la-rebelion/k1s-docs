@@ -73,13 +73,18 @@ const config = {
             to: '/',
           },
           {
-            to: 'https://sendfox.com/lp/3ol4zv',
+            to: '/roadmap',
+            label: 'Roadmap',
+            position: 'left',
+          },
+          {
+            to: 'https://go.rebelion.la/k1s-access',
             html: '<span style="backgroundColor: #25c2a0; borderRadius: 20px; padding: 10px">Get Early Access</span>',
-            position: 'right',
+            position: 'left',
             target: '_blank',
           },
           {
-            href: 'https://github.com/la-rebelion/k1s-docs',
+            href: 'https://go.rebelion.la/k1s-docs-gh?utm_medium=k1s-docs&utm_source=navbar&utm_campaign=docs',
             label: 'GitHub',
             className: 'header-github-link',
             position: 'right',
@@ -132,7 +137,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/la-rebelion/k1s-docs',
+                href: 'https://go.rebelion.la/k1s-docs-gh?utm_medium=k1s-docs&utm_source=footer&utm_campaign=docs',
               },
             ],
           },

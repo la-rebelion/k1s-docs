@@ -1,0 +1,132 @@
+---
+sidebar_position: 1
+sidebar_label: 'Pods'
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+<Tabs>
+<TabItem value="cr" label="curl">
+
+```cr
+curl https://api.k1s.me/kubernetes/api/v1/pods
+```
+
+</TabItem>
+<TabItem value="ht" label="Httpie">
+
+```ht
+https api.k1s.me/kubernetes/api/v1/pods
+```
+
+</TabItem>
+</Tabs>
+
+<Tabs>
+<TabItem value="js" label="JavaScript">
+
+```js
+// index.js
+const https = require('https');
+
+const options = {
+  hostname: 'api.k1s.me',
+  port: 443,
+  path: '/kubernetes/api/v1/pods',
+  method: 'GET'
+};
+
+const req = https.request(options, res => {
+  console.log(`statusCode: ${res.statusCode}`);
+
+  res.on('data', d => {
+    process.stdout.write(d);
+  });
+});
+
+req.on('error', error => {
+  console.error(error);
+});
+
+req.end();
+```
+
+**Execute code above assuming the file is named `index.js`?**
+
+1. Install Node.js from https://nodejs.org/en/download/
+2. Open a terminal and run `node index.js`
+3. The output should be similar to the following:
+`statusCode: 200`
+
+
+</TabItem>
+<TabItem value="py" label="Python">
+
+```py
+# k1s-pods.py
+import requests
+
+url = "https://api.k1s.me/kubernetes/api/v1/pods"
+payload={}
+headers = {}
+response = requests.request("GET", url, headers=headers, data=payload)
+
+print(response.text)
+```
+
+**Execute code above assuming the file is named `k1s-pods.py`?**
+
+1. Install Python from https://www.python.org/downloads/
+2. Open a terminal and run `python k1s-pods.py`
+3. The output should be similar to the following:
+`statusCode: 200`
+
+
+</TabItem>
+<TabItem value="java" label="Java">
+
+```java
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+
+import java.io.IOException;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        OkHttpClient client = new OkHttpClient().newBuilder()
+                .build();
+        Request request = new Request.Builder()
+                .url("https://api.k1s.me/kubernetes/api/v1/pods")
+                .method("GET", null)
+                .build();
+        Response response = client.newCall(request).execute();
+    }
+}
+```
+
+**Execute this code above assuming the file is named `K1sPods.java`?**
+
+1. Install Java from https://www.oracle.com/java/technologies/javase-downloads.html
+2. Download the OkHttp library from https://square.github.io/okhttp/ or mavencentral
+3. Open a terminal and run `javac K1sPods.java`
+4. Run `java K1sPods`
+5. The output should be similar to the following:
+`statusCode: 200`
+
+```sh
+$ curl -k https://repo1.maven.org/maven2/com/squareup/okhttp3/okhttp/4.11.0/okhttp-4.11.0.jar -o okhttp-4.11.0.jar
+$ javac -cp okhttp-4.11.0.jar:. K1sPods.java
+$ java -cp okhttp-4.11.0.jar:. K1sPods
+```
+
+</TabItem>
+</Tabs>
+
+--- 
+
+References: 
+
+* [httpie](https://httpie.io/docs/cli)

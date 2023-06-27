@@ -1,9 +1,14 @@
 ---
 slug: /
 sidebar_position: 1
+title: Kubernetes K1s Serverless cluster
+description: The best way to learn Kubernetes is by doing, and K1s, a Kubernetes serverless cluster will help you quickly get to grips with the technology.
+keywords:
+  - Kubernetes
+  - learn Kubernetes
 ---
 
-# Quick Start
+# Quick Start to learn Kubernetes
 
 :::caution Just use it!
 Pre-requisite to have `kubectl` [installed](https://kubectl.docs.kubernetes.io/installation/kubectl/).
@@ -18,20 +23,24 @@ All users are anonymous by default and have access to the default namespace, som
 Get the `pods` in the default namespace.
 
 ```bash
-kubectl get pods --server=https://k1s.me -ndefault
+kubectl get pods --server=https://api.k1s.me/kubernetes -ndefault
 ```
 
 Get the namespaces in the cluster.
 
 ```bash
-kubectl get namespaces --server=https://k1s.me
+kubectl get namespaces --server=https://api.k1s.me/kubernetes
 ```
 
-*.* <Highlight color="#25ffa0">[Get Early Access!](https://sendfox.com/lp/1r7409)</Highlight>
+:::tip Get Early Access!
+
+<a href="https://go.rebelion.la/k1s-access">Register here</a>
+
+:::
 
 ## What you'll need
 
-- [kubectl](https://kubectl.docs.kubernetes.io/installation/kubectl/) version 1.25 installed in your local PC or server from where K1s Serverless is going to be accessed.
+- [kubectl](https://kubectl.docs.kubernetes.io/installation/kubectl/) version 1.27+ installed in your local PC or server from where K1s Serverless is going to be accessed.
 
 export const Highlight = ({children, color}) => (
   <span

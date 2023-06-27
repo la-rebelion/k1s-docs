@@ -1,0 +1,44 @@
+---
+slug: /roadmap
+title: K1s roadmap
+description: The roadmap is a list of features that we are planning to implement in the future
+keywords:
+  - roadmap
+---
+
+# K1s Roadmap
+
+K1s roadmap is a list of Kubernetes features that are planned to be implemented in the future and what features we are working with now.
+Keep in mind that the roadmap is not a promise to implement the features. The roadmap is subject to change, and the features may be removed or added at any time. Keep an eye on the roadmap to see what features we are working on.
+
+
+|Symbol|Description|
+|---|---|
+|✅|Done|
+|👷🏽‍|Under Construction|
+|⚓|Planned, coming next|
+|-|Not apply|
+
+## API Dashboard
+---
+
+|PATH|Status|get|create|describe|patch|delete|put|
+|---|---|---|---|---|---|---|-|
+|/api/|✅|✅|-|-|-|-|-|
+|/api/v1/|✅|✅|-|-|-|-|-|
+|/apis/|✅|✅|-|-|-|-|-|
+|/apis/apps|✅|✅|-|-|-|-|-|
+|/apis/apps/v1|⚓|⚓|-|-|-|-|-|
+|/api/v1/pods|✅|✅|-|-|-|-|-|
+|/api/v1/namespaces|✅|✅|✅|-|-|-|-|
+|/api/v1/namespaces/{name}|👷|✅|-|-|⚓|⚓|⚓|
+|/api/v1/namespaces/{name}/pods|👷|👷|⚓|-|-|⚓|-|
+
+The Kubernetes API is huge with 428 API endpoints (paths), 113 for `api` group and 310 for `apis` group endpoints! We are working on the API dashboard to make it easier to navigate the API endpoints and the status on each of these.
+
+:::tip Get Early Access!
+
+Get the early access to our Serverless Kubernetes platform and get the latest updates on the implementation progress.  
+<a href="https://go.rebelion.la/k1s-access">Register here</a>
+
+:::
