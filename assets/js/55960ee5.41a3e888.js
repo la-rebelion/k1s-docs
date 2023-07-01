@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkk_1_s_docs=self.webpackChunkk_1_s_docs||[]).push([[121],{8070:e=>{e.exports=JSON.parse('[{"label":"apiVersion: v1","permalink":"/tags/api-version-v-1","count":1},{"label":"group: core","permalink":"/tags/group-core","count":1}]')}}]);
