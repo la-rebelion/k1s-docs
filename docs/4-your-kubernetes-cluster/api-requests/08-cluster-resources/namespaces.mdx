@@ -1,0 +1,176 @@
+---
+sidebar_position: 1
+sidebar_label: Namespaces
+description: Namespaces play a crucial role in organizing and managing resources within a Kubernetes cluster.
+title: Namespaces
+tags:
+  - "apiVersion: v1"
+  - "group: core"
+categories:
+  - Cluster Resources
+preview: /img/k8s-resources/namespaces.png
+keywords:
+  - Namespaces
+  - Kubernetes
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+<details>
+<summary><b>Namespaces</b> are a fundamental feature of Kubernetes that provide a way to logically partition and isolate resources within a cluster.</summary>
+
+Namespaces serve as a virtual cluster within a physical Kubernetes cluster, allowing different teams, projects, or applications to coexist and operate independently.
+
+In the context of Kubernetes deployments, namespaces play a crucial role in organizing and managing resources. They provide a scope for naming resources, such as [pods](../workload-resources/pods), services, replica sets, and more. By using namespaces, you can avoid naming conflicts and ensure that resources are uniquely identified within their respective namespace.
+
+Namespaces offer several benefits. Firstly, they enable better resource management by providing resource quotas and limits at the namespace level. This allows you to allocate specific amounts of CPU, memory, and storage to different namespaces based on their requirements, ensuring fair sharing of resources across different teams or applications.
+
+Secondly, namespaces facilitate logical isolation and access control. You can assign different levels of access and permissions to different namespaces, ensuring that teams or individuals can only interact with resources within their assigned namespace. This helps maintain security and separation of concerns within a multi-tenant cluster environment.
+
+Furthermore, namespaces provide a way to organize and categorize resources, making it easier to understand and navigate the overall cluster state. By grouping related resources into namespaces, you can easily identify and manage components that belong to a particular project, environment, or application.
+
+Overall, namespaces are an essential component of Kubernetes deployments. They provide a powerful mechanism for resource organization, isolation, and access control within a cluster. By leveraging namespaces effectively, you can achieve better resource management, enhance security, and simplify the management of complex deployments in a Kubernetes environment.
+
+![namespaces](/img/k8s-resources/namespaces.png)
+
+In the diagram it is represented a Kubernetes cluster with one namespace, within the namespace, it is depicted some of the different types of resources as components.
+
+In the example, we have one package/namespace called `backend` representing a namespace where deployments and StatefulSets. Within the components, we illustrate [pods](../workload-resources/pods) representing the individual instances of running processes within a namespace. We are connecting the [pods](../workload-resources/pods) to their respective services using appropriate arrows or lines and the ingress connectiong these services.
+
+To represent quotas, we include it as a JSON annotations attached to the namespace to indicate the quotas assigned to each namespace.
+
+</details>
+
+<Tabs>
+<TabItem value="k1s" label="kubectl">
+
+```k1s
+kubectl get namespaces --server=https://api.k1s.me/kubernetes
+```
+
+</TabItem>
+<TabItem value="cr" label="curl">
+
+```cr
+curl https://api.k1s.me/kubernetes/api/v1/namespaces
+```
+
+</TabItem>
+<TabItem value="ht" label="Httpie">
+
+```ht
+https api.k1s.me/kubernetes/api/v1/namespaces
+```
+
+</TabItem>
+</Tabs>
+
+<Tabs>
+<TabItem value="js" label="JavaScript">
+
+```js
+// index.js
+const https = require('https');
+
+const options = {
+  hostname: 'api.k1s.me',
+  port: 443,
+  path: '/kubernetes/api/v1/namespaces',
+  method: 'GET'
+};
+
+const req = https.request(options, res => {
+  console.log(`statusCode: ${res.statusCode}`);
+
+  res.on('data', d => {
+    process.stdout.write(d);
+  });
+});
+
+req.on('error', error => {
+  console.error(error);
+});
+
+req.end();
+```
+
+**Execute code above assuming the file is named `index.js`?**
+
+1. Install Node.js from https://nodejs.org/en/download/
+2. Open a terminal and run `node index.js`
+3. The output should be similar to the following:
+`statusCode: 200`
+
+
+</TabItem>
+<TabItem value="py" label="Python">
+
+```py
+# k1s-namespaces.py
+import requests
+
+url = "https://api.k1s.me/kubernetes/api/v1/namespaces"
+payload={}
+headers = {}
+response = requests.request("GET", url, headers=headers, data=payload)
+
+print(response.text)
+```
+
+**Execute code above assuming the file is named `k1s-namespaces.py`?**
+
+1. Install Python from https://www.python.org/downloads/
+2. Open a terminal and run `python k1s-namespaces.py`
+3. The output should be similar to the following:
+`statusCode: 200`
+
+
+</TabItem>
+<TabItem value="java" label="Java">
+
+```java
+// K1sNamespaces.java
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+
+import java.io.IOException;
+
+public class K1sNamespaces {
+    public static void main(String[] args) throws IOException {
+        OkHttpClient client = new OkHttpClient().newBuilder()
+                .build();
+        Request request = new Request.Builder()
+                .url("https://api.k1s.me/kubernetes/api/v1/namespaces")
+                .method("GET", null)
+                .build();
+        Response response = client.newCall(request).execute();
+    }
+}
+```
+
+**Execute this code above assuming the file is named `K1sNamespaces.java`?**
+
+1. Install Java from https://www.oracle.com/java/technologies/javase-downloads.html
+2. Download the OkHttp library from https://square.github.io/okhttp/ or mavencentral
+3. Open a terminal and run `javac K1sNamespaces.java`
+4. Run `java K1sNamespaces`
+5. The output should be similar to the following:
+`statusCode: 200`
+
+```sh
+$ curl -k https://repo1.maven.org/maven2/com/squareup/okhttp3/okhttp/4.11.0/okhttp-4.11.0.jar -o okhttp-4.11.0.jar
+$ javac -cp okhttp-4.11.0.jar:. K1sNamespaces.java
+$ java -cp okhttp-4.11.0.jar:. K1sNamespaces
+```
+
+</TabItem>
+</Tabs>
+
+--- 
+
+References: 
+
+* [httpie](https://httpie.io/docs/cli)
