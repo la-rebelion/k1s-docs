@@ -1,0 +1,13 @@
+label: 💻 K1s Terminal
+position: 2
+link:
+  type: generated-index
+  title: K1s Terminal
+  description: Simple and fast CLI that works with kubectl to democratize
+    Kubernetes and Cloud-Native operations.
+  slug: /k1s-terminal/
+  keywords:
+    - Kubernetes
+    - kubectl
+    - "'KX"
+  image: /img/docusaurus.png

@@ -1,0 +1,10 @@
+label: K1s Terminal
+position: 1
+link:
+  type: generated-index
+  title: K1s Terminal Updates
+  description: Stay up to date with the latest K1s Terminal updates and news.
+  keywords: [ Kubernetes, kubectl, K1s, Updates, News,
+              Release Notes, Changelog, K1s Terminal, K1s Serverless
+            ]
+  slug: /updates/k1s-terminal

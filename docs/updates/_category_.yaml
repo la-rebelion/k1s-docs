@@ -1,0 +1,11 @@
+label: Updates and News
+position: 10
+link:
+  type: generated-index
+  title: Updates and News
+  description: Stay up to date with the latest K1s news and updates released by the
+    K1s team.
+  slug: /updates
+  keywords: [ Kubernetes, kubectl, K1s, Updates, News,
+              Release Notes, Changelog, K1s Terminal, K1s Serverless
+            ]

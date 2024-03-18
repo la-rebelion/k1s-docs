@@ -1,0 +1,10 @@
+position: 4.5 # float position is supported
+label: 'Kubernetes API requests'
+collapsible: true # make the category collapsible
+collapsed: false # keep the category open by default
+link:
+  type: generated-index
+  title: Kubernetes API requests
+  slug: /k1s-serverless/api-requests
+customProps:
+  description: Kubernetes API requests grouped by resource type

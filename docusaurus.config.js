@@ -1,14 +1,15 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const {themes} = require('prism-react-renderer');
+const lightTheme = themes.github;
+const darkTheme = themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'K1s',
   tagline: 'Your Kubernetes Serverless cluster for developers and newbies',
-  url: 'https://k1s.me',
+  url: 'https://k1s.sh',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -119,12 +120,12 @@ const config = {
                 href: 'https://twitter.com/LaRebelionLabs',
               },
               {
-                label: 'Website',
+                label: 'Website Blog',
                 href: 'https://rebelion.la',
               },
               {
-                label: 'Console',
-                href: 'https://console.k1s.me',
+                label: 'K1s Terminal',
+                href: 'https://k1s.sh',
               },
             ],
           },
@@ -142,12 +143,17 @@ const config = {
             ],
           },
         ],
+        logo: {
+          alt: 'K1s Logo',
+          src: 'img/k1s-txt-180.png',
+          href: 'https://k1s.sh',
+          width: 60,
+          height: 60,
+        },
         copyright: `Made in TX<br/> K1s Copyright © ${new Date().getFullYear()} by La Rebelion Labs.`,
       },
       prism: {
-        // https://docusaurus.io/docs/api/themes/configuration#theme
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        additionalLanguages: ['bash', 'diff', 'json'],
       },
     }),
 };

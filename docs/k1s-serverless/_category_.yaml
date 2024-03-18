@@ -1,0 +1,12 @@
+label: ☁️ Kubernetes Serverless Cluster
+position: 3
+link:
+  type: generated-index
+  description: The best way to learn Kubernetes is by doing, and K1s, a Kubernetes
+    serverless cluster will help you quickly get to grips with the technology.
+  slug: /k1s-serverless
+  keywords:
+    - Kubernetes
+    - Kubernetes Serverless
+    - Kubernetes API
+  image: /img/docusaurus.png

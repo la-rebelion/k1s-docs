@@ -21,6 +21,13 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# https://github.com/yarnpkg/berry/issues/4598#issuecomment-1270723709
+.yarn/*
+!.yarn/cache
+!.yarn/releases
+!.yarn/plugins
+!.yarn/patches
+
 # Editor directories and files
 .idea
 .vscode

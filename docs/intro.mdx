@@ -1,36 +1,71 @@
 ---
 slug: /
 sidebar_position: 1
-title: Kubernetes K1s Serverless cluster
+title: Introduction
 description: The best way to learn Kubernetes is by doing, and K1s, a Kubernetes serverless cluster will help you quickly get to grips with the technology.
 keywords:
   - Kubernetes
   - learn Kubernetes
 ---
 
-# Quick Start to learn Kubernetes
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import k1stUrl from '/img/K1s-v0.2.0.gif';
 
-:::caution Just use it!
+# Quick Start to get Kubernetes in 1 Second
+
+K1s is a platform to democratize Kubernetes and cloud-native tools, making it more accessible to developers that are new to the technology. It is a Kubernetes serverless cluster and a terminal that is natively integrated with Kubernetes and cloud-native tools.
+
+**K1s is a Kubernetes serverless cluster** that allows you to quickly get to grips with the technology without the tough process of installation and configuration.
+
+**K1sT is a terminal nativaly integrated with Kubernetes and cloud-native tools**, it is a friendly, readable, color-coded, and interactive output for the `kubectl` command. It is a terminal that caches resources to facilitate navigation through the resources easily, making it the ultimate tool for streamlining your workflow and improving your career path.
+
+K1s is a Technical Preview and we are granting all the access with NO restrictions, in this phase, **user credentials/Auth is not required to use the service**. We are doing this to get feedback from the community and improve the product. We are also working on the pricing model and will be sharing the details soon.
+
+[Sign up steps](./getting-started/sign-up) for advanced features of K1s.
+
+:::caution Only for K1s Serverless
 Pre-requisite to have `kubectl` [installed](https://kubectl.docs.kubernetes.io/installation/kubectl/).
 :::
 
-Lighter and easier, impossible. 🪶 Kubernetes Serverless cluster.
+Lighter and easier, impossible. 🪶 
 
 The best way to learn Kubernetes is by doing, and K1s, a **Kubernetes serverless cluster** will help you quickly get to grips with the technology.
 
 All users are anonymous by default and have access to the default namespace, some examples you can try immediately:
 
-Get the `pods` in the default namespace.
+<Tabs>
+<TabItem value="k1s-terminal" label="K1sT">
 
-```bash
-kubectl get pods --server=https://api.k1s.me/kubernetes -ndefault
+Access the [K1s terminal](https://k1s.sh) and type command below, yes, that's all!
+
+```k1s
+kubectl get pods
 ```
 
-Get the namespaces in the cluster.
+<img src={k1stUrl} alt="K1s Terminal Demo" width="600" />
 
-```bash
-kubectl get namespaces --server=https://api.k1s.me/kubernetes
+
+</TabItem>
+<TabItem value="k1s-serverless" label="Local">
+
+You can also access the K1s serverless cluster from your local terminal if you have `kubectl` installed.
+
+```k1s
+kubectl get pods --server=https://api.k1s.me/kubernetes
 ```
+
+Ok, NO need to install anything, just use the terminal and type the command.
+
+```cr
+curl https://api.k1s.me/kubernetes/api/v1/pods
+```
+
+</TabItem>
+
+</Tabs>
+
+---
 
 :::tip Get Early Access!
 

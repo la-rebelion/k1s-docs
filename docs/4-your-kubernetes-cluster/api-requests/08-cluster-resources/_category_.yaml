@@ -1,9 +1,0 @@
-position: 8
-label: 'Cluster Resources'
-collapsible: true # make the category collapsible
-collapsed: true # keep the category collapsed by default
-link:
-  type: generated-index
-  title: Kubernetes API requests
-customProps:
-  description: Kubernetes API requests grouped by resource type

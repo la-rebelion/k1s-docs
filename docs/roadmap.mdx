@@ -1,7 +1,8 @@
 ---
 slug: /roadmap
-title: K1s roadmap
+title: Roadmap
 description: The roadmap is a list of features that we are planning to implement in the future
+  or the features that are WIP.
 keywords:
   - roadmap
 ---
@@ -18,6 +19,13 @@ Keep in mind that the roadmap is not a promise to implement the features. The ro
 |👷🏽‍|Under Construction|
 |⚓|Planned, coming next|
 |-|Not apply|
+
+:::tip Get Early Access!
+
+Get the early access to our Serverless Kubernetes platform and get the latest updates on the implementation progress.  
+<a href="https://go.rebelion.la/k1s-access">Register here</a>
+
+:::
 
 ## API Dashboard
 ---
@@ -36,9 +44,23 @@ Keep in mind that the roadmap is not a promise to implement the features. The ro
 
 The Kubernetes API is huge with 428 API endpoints (paths), 113 for `api` group and 310 for `apis` group endpoints! We are working on the API dashboard to make it easier to navigate the API endpoints and the status on each of these.
 
-:::tip Get Early Access!
+## K1s Terminal
 
-Get the early access to our Serverless Kubernetes platform and get the latest updates on the implementation progress.  
-<a href="https://go.rebelion.la/k1s-access">Register here</a>
+### `kubectl`
 
-:::
+<!-- Create the table based on Kubernetes RBAC rules:
+// https://kubernetes.io/docs/reference/access-authn-authz/rbac/
+
+apiGroups: "" | "apps" | "batch" | "extensions" | "networking.k8s.io" | "storage.k8s.io" | "rbac.authorization.k8s.io" | "policy" | "autoscaling" | "coordination.k8s.io" | "scheduling.k8s.io" | "settings.k8s.io" | "authentication.k8s.io" | "authorization.k8s.io" | "apiextensions.k8s.io" | "apiregistration.k8s.io" | "apps.openshift.io" | "build.openshift.io" | "image.openshift.io" | "network.openshift.io" | "oauth.openshift.io" | "project.openshift.io" | "quota.openshift.io" | "route.openshift.io" | "security.openshift.io" | "template.openshift.io" | "user.openshift.io" | "authorization.openshift.io" | "build.pipelines.openshift.io" | "console.openshift.io" | "operator.openshift.io" | "operator.openshift
+
+API Group: Core | Apps | Batch | Extensions | Networking | Storage | RBAC | Policy | Autoscaling | Coordination | Scheduling | Settings | Authentication | Authorization | API Extensions | API Registration | Apps OpenShift | Build OpenShift | Image OpenShift | Network OpenShift | OAuth OpenShift | Project OpenShift | Quota OpenShift | Route OpenShift | Security OpenShift | Template OpenShift | User OpenShift | Authorization OpenShift | Build Pipelines OpenShift | Console OpenShift | Operator OpenShift | Operator OpenShift -->
+
+#### Core API Group
+
+|Resource|Status|get|list|watch|create|update|patch|delete|deletecollection|
+|---|---|---|---|---|---|---|---|---|---|
+|pods|👷|✅|-|-|-|-|-|-|-|
+|namespaces|👷|✅|-|-|-|-|-|-|-|
+
+
+
