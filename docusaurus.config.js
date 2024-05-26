@@ -156,6 +156,12 @@ const config = {
         additionalLanguages: ['bash', 'diff', 'json'],
       },
     }),
+    scripts: [
+      {
+        src: 'https://js.hsforms.net/forms/embed/v2.js',
+        async: true,
+      },
+    ],
 };
 
 module.exports = config;
